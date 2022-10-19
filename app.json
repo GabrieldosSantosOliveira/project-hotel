@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "project-hotel",
+    "slug": "project-hotel",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
