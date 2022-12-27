@@ -1,10 +1,14 @@
 import { NavigationContainer } from '@react-navigation/native';
+import { useEffect } from 'react';
 
-import { StackRoutes } from './Stack';
+import { useAuth } from '../hooks/useAuth';
+import { StackRoutes, StackRoutesNoAuth } from './Stack';
 export const Routes = () => {
+  const { user } = useAuth();
+  console.log('USER =========>', user);
   return (
     <NavigationContainer>
-      <StackRoutes />
+      {user?.user ? <StackRoutesNoAuth /> : <StackRoutes />}
     </NavigationContainer>
   );
 };
